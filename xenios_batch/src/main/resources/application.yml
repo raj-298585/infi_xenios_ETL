@@ -1,0 +1,10 @@
+spring:
+  thymeleaf.cache: false
+  main.show-banner: false
+  
+  data:
+    mongodb:
+      uri: mongodb://localhost/test
+      
+application:
+  file-upload-path: /home/rajendra/RP/
