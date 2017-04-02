@@ -51,7 +51,7 @@ public class LoadIPJobConfig {
 	@StepScope
 	public MultiResourceItemReader<HttpRequestEntity> loadIpReader() {
 		MultiResourceItemReader<HttpRequestEntity> reader = new MultiResourceItemReader<HttpRequestEntity>();
-		Resource[] resources = ResourceUtil.readResources("/home/rajendra/RP", "Sheet1");
+		Resource[] resources = ResourceUtil.readResources(AppProperties.fileUploadPath, "Sheet1");
 		reader.setResources(resources);
 		reader.setDelegate(itemReader());
 		return reader;

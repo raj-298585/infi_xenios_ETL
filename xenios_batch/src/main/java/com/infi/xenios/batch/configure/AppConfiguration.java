@@ -13,11 +13,12 @@ public class AppConfiguration {
 	@Autowired
 	public JobBuilderFactory jobBuilderFactory;
 
+	@Autowired
+	public LoadIPJobConfig loadIPJobConfig;
+
 	@Bean
 	public Job stgLoadIpJob() {
-
-	
-		return null;
+		return jobBuilderFactory.get("loadIp").start(loadIPJobConfig.loadIPInfoStep()).build();
 	}
-	
+
 }
